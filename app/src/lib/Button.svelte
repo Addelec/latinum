@@ -1,7 +1,5 @@
 <script>
-  import {createEventDispatcher} from "svelte"
-
-  const dispatch = createEventDispatcher();
+  export let onclick = () => {};
 
   export let style = "primary";
   export let css = "";
@@ -18,7 +16,6 @@
       break;
   }
 
-  const press = () => dispatch("click")
 </script>
 
-<button class={tailwind + " " + css} on:click={press}><slot></slot></button>
+<button class={tailwind + " " + css} on:click={onclick}><slot></slot></button>

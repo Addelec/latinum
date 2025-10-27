@@ -10,7 +10,7 @@
   let eq_container: HTMLElement;
 
   const URL = "https://latinum.korff.dev";
-  const SCALE_FACTOR = 7;
+  const SCALE_FACTOR = 3;
 
   function saveAs(dataUrl: string, fileName: string): void {
     const link = document.createElement('a');
@@ -106,10 +106,10 @@
 
       <!-- Action Buttons -->
       <div class="w-full flex flex-col sm:flex-row gap-4 justify-center px-4">
-        <Button css="flex-1 sm:flex-none sm:w-48" on:click={download}>
+        <Button css="flex-1 sm:flex-none sm:w-48" onclick={download}>
           📥 Download
         </Button>
-        <Button css="flex-1 sm:flex-none sm:w-48" on:click={share} style="secondary">
+        <Button css="flex-1 sm:flex-none sm:w-48" onclick={share} style="secondary">
           🔗 Share
         </Button>
       </div>
