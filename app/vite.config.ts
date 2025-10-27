@@ -10,13 +10,20 @@ export default defineConfig({
     tailwindcss(), 
     VitePWA({
       registerType: 'autoUpdate',
-      injectRegister: 'auto',
-      strategies: 'injectManifest',
-      srcDir: 'src',
-      filename: 'sw.ts',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,ttf,eot}'],
         runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/cdn\.jsdelivr\.net\/npm\/katex@/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'katex-cache',
+              expiration: {
+                maxEntries: 30,
+                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
+              }
+            }
+          },
           {
             urlPattern: /^https:\/\/.*\.(png|jpg|jpeg|svg)$/,
             handler: 'CacheFirst',
