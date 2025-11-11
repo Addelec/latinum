@@ -1,6 +1,7 @@
 {
-  "name": "Latinum",
+  "name": "Latinum - LaTeX Equation to PNG Converter",
   "short_name": "Latinum",
+  "description": "Convert LaTeX equations to PNG instantly.",
   "start_url": "https://latinum.korff.dev/",
   "icons": [
     {
@@ -31,5 +32,6 @@
   "theme_color": "#21347d",
   "background_color": "#f5f0db",
   "display": "standalone",
-  "orientation": "any"
+  "orientation": "any",
+  "categories": ["productivity", "utilities"]
 }

@@ -1,4 +1,4 @@
-# Latinum
+![Latinum Logo](./app/src/assets/LatinumLarge.svg)
 
 A simple LaTeX equation editor. Rendering your equations as you type, lets you export as images or share via URL.
 [![Open app](https://img.shields.io/badge/Open%20app-latinum.korff.dev-brightgreen)](https://latinum.korff.dev)

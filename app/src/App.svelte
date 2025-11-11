@@ -11,7 +11,7 @@
   let eq_container: HTMLElement;
   let shareText = $state("🔗 Share");
 
-  let equation = $derived(value.replaceAll("\\ex", "^"));
+  let equation = $derived(value);
 
   const URL = "https://latinum.korff.dev";
   const SCALE_FACTOR = 3;
@@ -49,8 +49,6 @@
     if (isWebShareSupported()) {
       try {
         await navigator.share({
-          title: "Latinum",
-          text: "Check out this equation I made with Latinum!",
           url: shareUrl,
         });
       } catch (err) {
@@ -78,7 +76,7 @@
 
   onMount(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    const equationParam = urlParams.get("eq") || urlParams.get("equation");
+    const equationParam = urlParams.get("eq") || urlParams.get("equation"); // equation for backwards compatibility (it uses plain url encoding)
 
     if (equationParam) {
       try {
