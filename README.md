@@ -25,6 +25,10 @@ npm run dev
 
 Open `http://localhost:5173`
 
+## References
+- Icons by [lucide](https://lucide.dev/)
+
+
 ## License
 
 MIT
